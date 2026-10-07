@@ -1,81 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
-    <!-- <link rel="stylesheet" href="globals.css">
-    <link rel="stylesheet" href="styleguide.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Robert Warren - Professional Photographer Portfolio</title>
+    <meta name="description" content="Robert Warren is a professional photographer with over 26+ years of experience capturing emotions, portraits, weddings, and landscapes." />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="element-photographer">
-        <div class="header">
-            <div class="navigation">
+        <!-- HEADER & NAVIGATION -->
+        <header class="header">
+            <nav class="navigation">
                 <div class="logo">
                     <div class="favicon">
                         <div class="text-wrapper-2">#</div>
                     </div>
                     <div class="text-wrapper-3">Robert Warren</div>
                 </div>
-                <div class="navbar">
-                    <div class="text-wrapper-4">Home</div>
-                    <div class="text-wrapper-5">About</div>
-                    <div class="text-wrapper-5">Gallery</div>
-                    <div class="text-wrapper-5">Pricing Plan</div>
-                    <div class="text-wrapper-5">Blog</div>
-                    <div class="text-wrapper-5">Contact</div>
-                    <button class="button"><img class="img" src="img/PhoneCall.png" />
-                        <div class="button-2">+1-202-555-0120</div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="navbar" id="navbar">
+                    <a href="#home" class="text-wrapper-4">Home</a>
+                    <a href="#about" class="text-wrapper-5">About</a>
+                    <a href="#gallery" class="text-wrapper-5">Gallery</a>
+                    <a href="#services" class="text-wrapper-5">Services</a>
+                    <a href="#pricing" class="text-wrapper-5">Pricing Plan</a>
+                    <a href="#blog" class="text-wrapper-5">Blog</a>
+                    <a href="#contact" class="text-wrapper-5">Contact</a>
+                    <button class="button" onclick="window.location.href='tel:+12025550120'">
+                        <img class="img" src="img/PhoneCall.png" alt="Phone Icon" />
+                        <span class="button-2">+1-202-555-0120</span>
                     </button>
                 </div>
-            </div>
-            <div class="div">
-                <p class="text-wrapper">Hello, I’m Robert. I’m <br> expert in to capture all <br> the feelings.</p>
+            </nav>
+
+            <div class="div" id="home">
+                <h1 class="text-wrapper">Hello, I’m Robert. I’m expert in to capture all the feelings.</h1>
                 <div class="div-2">
-                    <p class="p">Nullam et ex lectus. Integer felis sapien, tempor maximus est in, commodo aliquam
-                        libero. Curabitur quam risus, consecur nec commodo nec, bibendum sed sapien.</p>
+                    <p class="p">Nullam et ex lectus. Integer felis sapien, tempor maximus est in, commodo aliquam libero. Curabitur quam risus, consecur nec commodo nec, bibendum sed sapien.</p>
                     <div class="div-3">
-                        <button class="button">
-                            <div class="button-2">View Gallery</div>
-                            <img class="img" src="img/ArrowRight (1).png" />
+                        <button class="button" onclick="document.getElementById('gallery').scrollIntoView({behavior: 'smooth'})">
+                            <span class="button-2">View Gallery</span>
+                            <img class="img" src="img/ArrowRight (1).png" alt="Arrow Right" />
                         </button>
-                        <button class="button-3">
-                            <img class="img" src="img/ChatCenteredDots.png" />
-                            <div class="button-4">Get In Touch</div>
+                        <button class="button-3" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                            <img class="img" src="img/ChatCenteredDots.png" alt="Chat Icon" />
+                            <span class="button-4">Get In Touch</span>
                         </button>
                     </div>
                 </div>
             </div>
 
+            <!-- HEADER PHOTO STRIP -->
             <div class="all-photo">
-                <div class="images"><img class="element" src="img/02.png" /></div>
-                <div class="element-wrapper"><img class="element-2" src="img/Images (1).png" /></div>
-                <div class="img-wrapper"><img class="element-3" src="img/Images (2).png" /></div>
-                <div class="element-wrapper"><img class="element-3" src="img/Images (3).png" /></div>
-                <div class="img-wrapper"><img class="element-2" src="img/Images (4).png" /></div>
-                <div class="element-wrapper"><img class="element" src="img/Images (5).png" /></div>
+                <div><img src="img/Images.png" alt="Photography work 1" /></div>
+                <div><img src="img/Images (1).png" alt="Photography work 2" /></div>
+                <div><img src="img/Images (2).png" alt="Photography work 3" /></div>
+                <div><img src="img/Images (3).png" alt="Photography work 4" /></div>
+                <div><img src="img/Images (4).png" alt="Photography work 5" /></div>
+                <div><img src="img/Images (5).png" alt="Photography work 6" /></div>
             </div>
-        </div>
-        <div class="about">
+        </header>
+
+        <!-- ABOUT SECTION -->
+        <section class="about" id="about">
             <div class="photo">
                 <div class="fun-fact">
                     <div class="content">
                         <div class="text-wrapper-6">26+</div>
                         <div class="text-wrapper-7">Years of experience</div>
                     </div>
-                    <img class="devider" src="img/Devider.png" />
+                    <div class="devider"></div>
                     <div class="content">
                         <div class="text-wrapper-6">98.5%</div>
                         <div class="text-wrapper-7">Client Satisfaction</div>
                     </div>
-                    <img class="devider" src="img/Devider.png" />
+                    <div class="devider"></div>
                     <div class="content">
                         <div class="text-wrapper-6">2149+</div>
                         <div class="text-wrapper-7">Beautiful Photo</div>
                     </div>
-                    <img class="devider" src="img/Devider.png" />
+                    <div class="devider"></div>
                     <div class="content">
                         <div class="text-wrapper-6">17+</div>
                         <div class="text-wrapper-7">Awards</div>
@@ -86,304 +97,346 @@
                 <div class="div-4">
                     <div class="div-5">
                         <div class="div-3">
-                            <div class="text-wrapper-8">📸 Photographer</div>
-                            <div class="text-wrapper-8">📖 Writer</div>
-                            <div class="text-wrapper-8">✈️ Traveler</div>
+                            <span class="text-wrapper-8">📸 Photographer</span>
+                            <span class="text-wrapper-8">📖 Writer</span>
+                            <span class="text-wrapper-8">✈️ Traveler</span>
                         </div>
-                        <p class="text-wrapper-9">My name is Robert Warren. I’m a professional photographer for almost
-                            26+ years.</p>
+                        <h2 class="text-wrapper-9">My name is Robert Warren. I’m a professional photographer for almost 26+ years.</h2>
                     </div>
-                    <p class="text-wrapper-10">Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula.
-                        Aliquam bibendum, sapien vel placerat euismod, sem eros congue neque, eget dapibus felis ligula
-                        ac nibh. In eget erat purus. Maecenas porta metus nec porttitor gravida. Fusce quis faucibus
-                        nisi, sit amet dictum ipsum. Nunc eu lorem at libero congue dictum nam et nunc tincidunt, mollis
-                        sapien.</p>
+                    <p class="text-wrapper-10">Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula. Aliquam bibendum, sapien vel placerat euismod, sem eros congue neque, eget dapibus felis ligula ac nibh. In eget erat purus. Maecenas porta metus nec porttitor gravida. Fusce quis faucibus nisi, sit amet dictum ipsum. Nunc eu lorem at libero congue dictum nam et nunc tincidunt, mollis sapien.</p>
                 </div>
-                <button class="button-5"><button class="button"><img class="img" src="img/ChatCenteredDots.png" />
-                        <div class="button-2">Get In Touch</div>
+                <div class="div-3">
+                    <button class="button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        <img class="img" src="img/ChatCenteredDots (1).png" alt="Chat Icon" />
+                        <span class="button-2">Get In Touch</span>
                     </button>
                     <div class="div-6">
-                        <div class="social-media"><img class="img-2" src="img/Subtract.png" /></div>
-                        <div class="social-media"><img class="social-media-2" src="img/Vectoor.png" /></div>
-                        <div class="social-media"><img class="img-2" src="img/Vecctor.png" /></div>
-                        <div class="social-media"><img class="img-2" src="img/Vector (1).png" /></div>
-                        <div class="social-media"><img class="img-2" src="img/Vector (2).png" /></div>
+                        <a href="#" class="social-media" aria-label="Social Link 1"><img src="img/Social Media.png" alt="Social Icon" /></a>
+                        <a href="#" class="social-media" aria-label="Social Link 2"><img src="img/Social Media (1).png" alt="Social Icon" /></a>
+                        <a href="#" class="social-media" aria-label="Social Link 3"><img src="img/Social Media (2).png" alt="Social Icon" /></a>
+                        <a href="#" class="social-media" aria-label="Social Link 4"><img src="img/Social Media (3).png" alt="Social Icon" /></a>
+                        <a href="#" class="social-media" aria-label="Social Link 5"><img src="img/Social Media (4).png" alt="Social Icon" /></a>
                     </div>
-                </button>
+                </div>
             </div>
-        </div>
-        <div class="gallery">
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section class="gallery" id="gallery">
             <div class="heading">
                 <div class="div-7">
-                    <div class="text-wrapper-11">My Gallery</div>
-                    <p class="text-wrapper-12">Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula.
-                        Aliquam bibendum, sapien vel placerat.</p>
+                    <h2 class="text-wrapper-11">My Gallery</h2>
+                    <p class="text-wrapper-12">Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula. Aliquam bibendum, sapien vel placerat.</p>
                 </div>
-                <button class="button-6">
-                    <div class="button-7">View More</div>
-                    <img class="img" src="img/ArrowRight (2).png" />
+                <button class="button-6" onclick="alert('Viewing full gallery collection!')">
+                    <span class="button-7">View More</span>
+                    <img class="img" src="img/ArrowRight (2).png" alt="Arrow Right" />
                 </button>
             </div>
             <div class="div-8">
-                <div class="div-4"><img class="image" src="img/Image.png" />
-                    <img class="image" src="img/Image (1).png" />
-                    <img class="image" src="img/Image (2).png" />
+                <div class="div-4">
+                    <img class="image" src="img/Image.png" alt="Gallery Photo 1" />
+                    <img class="image" src="img/Image (1).png" alt="Gallery Photo 2" />
+                    <img class="image" src="img/Image (2).png" alt="Gallery Photo 3" />
                 </div>
-                <div class="div-4"><img class="image-2" src="img/Imageee.png" />
-                    <img class="image-3" src="img/Image (3).png" />
+                <div class="div-4">
+                    <img class="image-2" src="img/Image (9).png" alt="Gallery Photo 4" />
+                    <img class="image-3" src="img/Image (3).png" alt="Gallery Photo 5" />
                 </div>
-                <div class="div-4"><img class="image-4" src="img/Image (4).png" />
-                    <img class="image-4" src="img/Image (5).png" />
-                    <img class="image-4" src="img/Image (6).png" />
-                    <img class="image-4" src="img/Image (7).png" />
+                <div class="div-4">
+                    <img class="image-4" src="img/Image (4).png" alt="Gallery Photo 6" />
+                    <img class="image-4" src="img/Image (5).png" alt="Gallery Photo 7" />
+                    <img class="image-4" src="img/Image (6).png" alt="Gallery Photo 8" />
+                    <img class="image-4" src="img/Image (7).png" alt="Gallery Photo 9" />
                 </div>
             </div>
-        </div>
-        <div class="my-services">
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="my-services" id="services">
             <div class="div-7">
-                <div class="text-wrapper-13">My Services</div>
-                <p class="text-wrapper-12">Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula.
-                    Aliquam bibendum, sapien vel placerat.</p>
+                <h2 class="text-wrapper-13">My Services</h2>
+                <p class="text-wrapper-12">Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula. Aliquam bibendum, sapien vel placerat.</p>
             </div>
             <div class="section">
                 <div class="div-4">
-                    <div class="services"><img class="img-3" src="img/SmileySticker.png" />
+                    <div class="services">
+                        <img class="img-3" src="img/SmileySticker.png" alt="Smiley Icon" />
                         <div class="div-5">
-                            <div class="portrait-fashion">Portrait &amp; Fashion Photography</div>
-                            <p class="text-wrapper-14">Morbi semper sem diam, nec commodo diam laoreet at. Morbi blandit
-                                hendrerit vehicula.</p>
+                            <h3 class="portrait-fashion">Portrait &amp; Fashion Photography</h3>
+                            <p class="text-wrapper-14">Morbi semper sem diam, nec commodo diam laoreet at. Morbi blandit hendrerit vehicula.</p>
                         </div>
                     </div>
-                    <div class="services-2"><img class="img-3" src="img/PresentationChart.png" />
+                    <div class="services-2">
+                        <img class="img-3" src="img/PresentationChart.png" alt="Presentation Icon" />
                         <div class="div-5">
-                            <div class="portrait-fashion">Wedding &amp; Events Photography</div>
-                            <p class="text-wrapper-14">Morbi semper sem diam, nec commodo diam laoreet at. Morbi blandit
-                                hendrerit vehicula.</p>
+                            <h3 class="portrait-fashion">Wedding &amp; Events Photography</h3>
+                            <p class="text-wrapper-14">Morbi semper sem diam, nec commodo diam laoreet at. Morbi blandit hendrerit vehicula.</p>
                         </div>
                     </div>
-                    <div class="services"><img class="img-3" src="img/Compass.png" />
+                    <div class="services">
+                        <img class="img-3" src="img/Compass.png" alt="Compass Icon" />
                         <div class="div-5">
-                            <div class="portrait-fashion">Architectural, Travel &amp; Lifestyle</div>
-                            <p class="text-wrapper-14">Morbi semper sem diam, nec commodo diam laoreet at. Morbi blandit
-                                hendrerit vehicula.</p>
+                            <h3 class="portrait-fashion">Architectural, Travel &amp; Lifestyle</h3>
+                            <p class="text-wrapper-14">Morbi semper sem diam, nec commodo diam laoreet at. Morbi blandit hendrerit vehicula.</p>
                         </div>
                     </div>
                 </div>
-                <div class="photo-2"><img class="element-4" src="img/01.png" />
-                    <img class="element-5" src="img/02.png" />
-                    <img class="element-6" src="img/03.png" />
+                <div class="photo-2">
+                    <img class="element-4" src="img/01.png" alt="Service Showcase 1" />
+                    <img class="element-5" src="img/02.png" alt="Service Showcase 2" />
+                    <img class="element-6" src="img/03.png" alt="Service Showcase 3" />
                 </div>
             </div>
-        </div>
-        <div class="pricing-plans">
-            <div class="text-wrapper-15">Pricing Plans</div>
+        </section>
+
+        <!-- PRICING PLANS SECTION -->
+        <section class="pricing-plans" id="pricing">
+            <h2 class="text-wrapper-15">Pricing Plans</h2>
             <div class="div-8">
+                <!-- Standard Plan -->
                 <div class="pricing-plan">
                     <div class="div-4">
                         <div class="text-wrapper-16">$625</div>
                         <div class="div-5">
-                            <div class="text-wrapper-17">Standard</div>
-                            <p class="text-wrapper-18">In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas
-                                vulputate, arcu eget condin.</p>
+                            <h3 class="text-wrapper-17">Standard</h3>
+                            <p class="text-wrapper-18">In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.</p>
                         </div>
                     </div>
-                    <img class="line" src="img/line-15.svg" />
+                    <div class="line"></div>
                     <div class="div-9">
-                        <div class="div-6"><img class="img" src="img/CheckCircle.png" />
-                            <div class="label">2 Hours</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle.png" alt="Check Icon" />
+                            <span class="label">2 Hours</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle.png" />
-                            <div class="label">1 Photographer</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle.png" alt="Check Icon" />
+                            <span class="label">1 Photographer</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle (1).png" />
-                            <div class="label-2">Specail Photo Edits</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle (1).png" alt="Disabled Check Icon" />
+                            <span class="label-2">Special Photo Edits</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle (1).png" />
-                            <div class="label-2">Wedding, Events &amp; Festivals</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle (1).png" alt="Disabled Check Icon" />
+                            <span class="label-2">Wedding, Events &amp; Festivals</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle (1).png" />
-                            <div class="label-2">Engagement Shoot</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle (1).png" alt="Disabled Check Icon" />
+                            <span class="label-2">Engagement Shoot</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle (1).png" />
-                            <div class="label-3">Ceremony Video</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle (1).png" alt="Disabled Check Icon" />
+                            <span class="label-3">Ceremony Video</span>
                         </div>
                     </div>
-                    <button class="button-8">
-                        <div class="button-7">Let’s Work Together</div>
-                        <img class="img" src="img/ArrowRight (2).png" />
+                    <button class="button-8" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        <span class="button-7">Let’s Work Together</span>
+                        <img class="img" src="img/ArrowRight (2).png" alt="Arrow Right" />
                     </button>
                 </div>
+
+                <!-- Premium Plan -->
                 <div class="pricing-plan">
                     <div class="div-4">
                         <div class="frame">
                             <div class="text-wrapper-19">$1,600</div>
                             <div class="div-wrapper">
-                                <div class="text-wrapper-20">Recommended</div>
+                                <span class="text-wrapper-20">Recommended</span>
                             </div>
                         </div>
                         <div class="div-5">
-                            <div class="text-wrapper-17">Premium</div>
-                            <p class="text-wrapper-18">In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas
-                                vulputate, arcu eget condin.</p>
+                            <h3 class="text-wrapper-17">Premium</h3>
+                            <p class="text-wrapper-18">In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.</p>
                         </div>
                     </div>
-                    <img class="line" src="img/line-15-3.svg" />
+                    <div class="line"></div>
                     <div class="div-9">
-                        <div class="div-6"><img class="img" src="img/CheckCircle.png" />
-                            <div class="label">4 Hours</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle.png" alt="Check Icon" />
+                            <span class="label">4 Hours</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle.png" />
-                            <div class="label">1 Photographer</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle.png" alt="Check Icon" />
+                            <span class="label">1 Photographer</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle.png" />
-                            <div class="label">Specail Photo Edits</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle.png" alt="Check Icon" />
+                            <span class="label">Special Photo Edits</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle.png" />
-                            <div class="label">Wedding, Events &amp; Festivals</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle.png" alt="Check Icon" />
+                            <span class="label">Wedding, Events &amp; Festivals</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle (1).png" />
-                            <div class="label-2">Engagement Shoot</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle (1).png" alt="Disabled Check Icon" />
+                            <span class="label-2">Engagement Shoot</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle (1).png" />
-                            <div class="label-3">Ceremony Video</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle (1).png" alt="Disabled Check Icon" />
+                            <span class="label-3">Ceremony Video</span>
                         </div>
                     </div>
-                    <button class="button-9">
-                        <div class="button-2">Let’s Work Together</div>
-                        <img class="img" src="img/ArrowRight (1).png" />
+                    <button class="button-9" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        <span class="button-2">Let’s Work Together</span>
+                        <img class="img" src="img/ArrowRight (1).png" alt="Arrow Right" />
                     </button>
                 </div>
+
+                <!-- Business Plan -->
                 <div class="pricing-plan">
                     <div class="div-4">
                         <div class="text-wrapper-16">$3,650</div>
                         <div class="div-5">
-                            <div class="text-wrapper-17">Business</div>
-                            <p class="text-wrapper-18">In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas
-                                vulputate, arcu eget condin.</p>
+                            <h3 class="text-wrapper-17">Business</h3>
+                            <p class="text-wrapper-18">In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.</p>
                         </div>
                     </div>
-                    <img class="line" src="img/line-15-2.svg" />
+                    <div class="line"></div>
                     <div class="div-9">
-                        <div class="div-6"><img class="img" src="img/CheckCircle.png" />
-                            <div class="label">6+ Hours</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle.png" alt="Check Icon" />
+                            <span class="label">6+ Hours</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle.png" />
-                            <div class="label">2 Photographer</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle.png" alt="Check Icon" />
+                            <span class="label">2 Photographers</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle.png" />
-                            <div class="label">Specail Photo Edits</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle.png" alt="Check Icon" />
+                            <span class="label">Special Photo Edits</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle.png" />
-                            <div class="label">Wedding, Events &amp; Festivals</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle.png" alt="Check Icon" />
+                            <span class="label">Wedding, Events &amp; Festivals</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle.png" />
-                            <div class="label">Engagement Shoot</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle.png" alt="Check Icon" />
+                            <span class="label">Engagement Shoot</span>
                         </div>
-                        <div class="div-6"><img class="img" src="img/CheckCircle.png" />
-                            <div class="label">Ceremony Video</div>
+                        <div class="div-6">
+                            <img class="img" src="img/CheckCircle.png" alt="Check Icon" />
+                            <span class="label">Ceremony Video</span>
                         </div>
                     </div>
-                    <button class="button-8">
-                        <div class="button-7">Let’s Work Together</div>
-                        <img class="img" src="img/ArrowRight (2).png" />
+                    <button class="button-8" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        <span class="button-7">Let’s Work Together</span>
+                        <img class="img" src="img/ArrowRight (2).png" alt="Arrow Right" />
                     </button>
                 </div>
             </div>
-        </div>
-        <div class="blog-news">
-            <div class="text-wrapper-15">Blog &amp; News</div>
+        </section>
+
+        <!-- BLOG & NEWS SECTION -->
+        <section class="blog-news" id="blog">
+            <h2 class="text-wrapper-15">Blog &amp; News</h2>
             <div class="div-8">
-                <div class="article"><img class="img" src="img/Article.png"/>
-                <div class="article-2"><img class="img" src="img/Article (1).png"/>
-                <div class="article-3"><img class="img" src="img/Article (2).png"/>
-                <div class="heading-wrapper">
-                    <!-- <div class="heading-2">
+                <article class="article"></article>
+                <article class="article-2"></article>
+                <article class="heading-wrapper">
+                    <div class="heading-2">
                         <div class="div-6">
-                            <div class="text-wrapper-21">22 Oct, 2020</div>
-                            <div class="text-wrapper-21">/</div>
-                            <div class="text-wrapper-21">246 Comments</div>
+                            <span class="text-wrapper-21">22 Oct, 2020</span>
+                            <span class="text-wrapper-21">/</span>
+                            <span class="text-wrapper-21">246 Comments</span>
                         </div>
-                        <p class="text-wrapper-22">Duis magna risus, convallis vel purus eu, sollicitudin volutpat vel.
-                        </p>
-                    </div> -->
-                </div>
+                        <p class="text-wrapper-22">Duis magna risus, convallis vel purus eu, sollicitudin volutpat vel.</p>
+                    </div>
+                </article>
             </div>
-        </div> </div> </div>
-        <div class="latest-instagram">
-            <div class="text-wrapper-15">Latest instagram post</div>
+        </section>
+
+        <!-- LATEST INSTAGRAM POSTS SECTION -->
+        <section class="latest-instagram">
+            <h2 class="text-wrapper-15">Latest instagram post</h2>
             <div class="div-8">
-                <div class="image-5" ><img class="social-media-3" src="img/Image (8).png" /></div>
-                <div class="image-6"><img class="social-media-3" src="img/Image (9).png" /></div>
-                <div class="image-7"><img class="social-media-3" src="img/Image (10).png" /></div>
-                <div class="social-media-wrapper"><img class="social-media-3" src="img/Image (11).png" /></div>
-                <div class="image-8"><img class="social-media-3" src="img/Image (12).png" /></div>
-                <div class="image-9"><img class="social-media-3" src="img/Image (13).png" /></div>
+                <div class="image-5"></div>
+                <div class="image-6"></div>
+                <div class="image-7"></div>
+                <div class="social-media-wrapper">
+                    <img class="social-media-3" src="img/Social Media (5).png" alt="Instagram Icon" />
+                </div>
+                <div class="image-8"></div>
+                <div class="image-9"></div>
             </div>
-        </div>
-        <div class="footer">
+        </section>
+
+        <!-- FOOTER & CONTACT SECTION -->
+        <footer class="footer" id="contact">
             <div class="contat">
                 <div class="div-2">
                     <div class="div-9">
-                        <p class="text-wrapper-23">Have a project or question in mind? Just send me a message.</p>
-                        <p class="text-wrapper-24">Do you fancy saying hi to me or do you want to get started with your
-                            project and you need my help? Feel free to contact me. I will reply within 48 hours.</p>
+                        <h3 class="text-wrapper-23">Have a project or question in mind? Just send me a message.</h3>
+                        <p class="text-wrapper-24">Do you fancy saying hi to me or do you want to get started with your project and you need my help? Feel free to contact me. I will reply within 48 hours.</p>
                     </div>
                     <div class="div-4">
                         <div class="div-10">
-                            <div class="icon"><img class="img" src="img/PhoneCalll.png" /></div>
+                            <div class="icon">
+                                <img class="img" src="img/PhoneCall.png" alt="Phone Call Icon" />
+                            </div>
                             <div class="content-2">
-                                <div class="text-wrapper-25">Call me now</div>
-                                <div class="text-wrapper-26">+1-202-555-0190</div>
+                                <span class="text-wrapper-25">Call me now</span>
+                                <span class="text-wrapper-26">+1-202-555-0190</span>
                             </div>
                         </div>
                         <div class="div-10">
-                            <div class="icon"><img class="img" src="img/Envelope.png" /></div>
+                            <div class="icon">
+                                <img class="img" src="img/ChatCenteredDots (1).png" alt="Email Icon" />
+                            </div>
                             <div class="content-2">
-                                <div class="text-wrapper-25">Chat with me</div>
-                                <div class="text-wrapper-26">kevin.gilbert@gmail.com</div>
+                                <span class="text-wrapper-25">Chat with me</span>
+                                <span class="text-wrapper-26">kevin.gilbert@gmail.com</span>
                             </div>
                         </div>
                     </div>
                     <div class="connnect-with-me">
                         <p class="text-wrapper-27">Follow me on social media</p>
-                        <div class="social"><img class="line-2" src="img/Line 1.png" />
-                            <div class="social-media-4"><img class="img-2" src="img/Social-Media.png" /></div>
-                            <div class="social-media-4"><img class="social-media-2" src="img/Vectoor.png" />
-                            </div>
-                            <div class="social-media-5"><img class="img-2" src="img/Vectorr.png" /></div>
-                            <div class="social-media-4"><img class="img-2" src="img/Vector (1).png" /></div>
-                            <div class="social-media-4"><img class="img-2" src="img/Vector (2).png" /></div>
+                        <div class="social">
+                            <div class="line-2"></div>
+                            <a href="#" class="social-media-4" aria-label="Social Link 1"><img class="img-2" src="img/Social Media.png" alt="Social" /></a>
+                            <a href="#" class="social-media-4" aria-label="Social Link 2"><img class="social-media-2" src="img/Social Media (1).png" alt="Social" /></a>
+                            <a href="#" class="social-media-5" aria-label="Social Link 3"><img class="img-2" src="img/Social Media (6).png" alt="Social" /></a>
+                            <a href="#" class="social-media-4" aria-label="Social Link 4"><img class="img-2" src="img/Social Media (3).png" alt="Social" /></a>
+                            <a href="#" class="social-media-4" aria-label="Social Link 5"><img class="img-2" src="img/Social Media (4).png" alt="Social" /></a>
                         </div>
                     </div>
                 </div>
-                <!-- <img class="devider-2" src="img/Ph" /> -->
+
                 <div class="div-2">
-                    <div class="text-wrapper-28">Just say 👋 Hi</div>
-                    <div class="div-9">
-                        <div class="div-3"><input class="input-field" placeholder="Full Name" type="text" />
-                            <input class="input-field-wrapper" placeholder="Email Adress" type="email" />
+                    <h3 class="text-wrapper-28">Just say 👋 Hi</h3>
+                    <form class="div-9" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent successfully.'); this.reset();">
+                        <div class="div-3">
+                            <input class="input-field" placeholder="Full Name" type="text" required />
+                            <input class="input-field-wrapper" placeholder="Email Address" type="email" required />
                         </div>
                         <div class="input-field-2">
-                            <div class="text-wrapper-29">Subject</div>
+                            <input class="input" placeholder="Subject" type="text" required />
                         </div>
                         <div class="div-3">
                             <div class="select">
-                                <div class="text-wrapper-29">Pricing Plans</div>
-                                <img class="caret-down" src="img/CaretDown.png" />
+                                <select class="input" style="appearance: none; -webkit-appearance: none; cursor: pointer;">
+                                    <option value="" disabled selected>Pricing Plans</option>
+                                    <option value="standard">Standard - $625</option>
+                                    <option value="premium">Premium - $1,600</option>
+                                    <option value="business">Business - $3,650</option>
+                                </select>
                             </div>
                             <div class="input-field-3">
-                                <div class="danger">Date</div>
-                                <img class="calendar-blank" src="img/CalendarBlank.png" />
+                                <input class="input" type="text" placeholder="Date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" />
                             </div>
                         </div>
-                        <div class="input-field-4"><input class="input" placeholder="Message" type="number" /></div>
-                    </div>
-                    <button class="button">
-                        <div class="button-2">Send Message</div>
-                        <img class="img" src="img/PaperPlaneRight.png" />
-                    </button>
+                        <div class="input-field-4">
+                            <textarea class="input" placeholder="Message" required style="height: 100%; resize: none; padding-top: 12px;"></textarea>
+                        </div>
+                        <button type="submit" class="button">
+                            <span class="button-2">Send Message</span>
+                            <img class="img" src="img/PaperPlaneRight.png" alt="Send Icon" />
+                        </button>
+                    </form>
                 </div>
             </div>
+
+            <!-- BOTTOM FOOTER -->
             <div class="footer-2">
                 <div class="logo">
                     <div class="favicon">
@@ -392,16 +445,28 @@
                     <div class="text-wrapper-30">Robert Warren</div>
                 </div>
                 <div class="div-8">
-                    <div class="text-wrapper-31">Home</div>
-                    <div class="text-wrapper-31">About</div>
-                    <div class="text-wrapper-8">Services</div>
-                    <div class="text-wrapper-31">Gallery</div>
-                    <div class="text-wrapper-31">Contact</div>
+                    <a href="#home" class="text-wrapper-31">Home</a>
+                    <a href="#about" class="text-wrapper-31">About</a>
+                    <a href="#services" class="text-wrapper-8">Services</a>
+                    <a href="#gallery" class="text-wrapper-31">Gallery</a>
+                    <a href="#contact" class="text-wrapper-31">Contact</a>
                 </div>
                 <div class="text-wrapper-32">© 2022 Robert Warren</div>
             </div>
+        </footer>
+
+        <!-- FLOATING DARK / LIGHT MODE BUTTON -->
+        <div class="dark-light-mode" id="themeToggle" title="Toggle Theme">
+            <img class="img" src="img/Sunnn.png" alt="Sun Icon" />
         </div>
-        <div class="dark-light-mode"><img class="img" src="img/Sunnn.png" /></div>
+
+        <!-- GALLERY LIGHTBOX MODAL -->
+        <div class="gallery-modal" id="galleryModal" onclick="closeGalleryModal(event)">
+            <div class="gallery-modal-content">
+                <span class="gallery-modal-close" onclick="closeGalleryModal(event)">&times;</span>
+                <img id="modalImg" src="" alt="Full View" />
+            </div>
+        </div>
     </div>
 </body>
 

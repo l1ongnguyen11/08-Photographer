@@ -1,207 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-/* ==========================================================================
-   Reset & Base Styles
-   ========================================================================== */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-}
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
 
+/* =========================================================
+   DESIGN TOKENS & VARIABLES
+   ========================================================= */
 :root {
-  --photographer-500: #2db24a;
-  --photographer-100: #d5f0db;
   --photographer-50: #eaf7ed;
+  --photographer-100: #d5f0db;
+  --photographer-500: #2db24a;
   --photographer-600: #23963c;
 
   --navy: #132238;
-  --text-900: #424e60;
+  --text-900: #132138;
   --text-700: #424e60;
   --text-600: #556070;
+  --text-400: #87909d;
   --text-300: #a5acb5;
   --text-200: #c3c7ce;
   --border: #e5e7ea;
   --bg-gray: #f0f1f3;
 
-  --font-gray: "Barlow", Helvetica, Arial, sans-serif;
+  --font: "Barlow", Helvetica, Arial, sans-serif;
+
+  /* Transparent fallback data URI */
   --blank: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
-
-  --lawyer-heading-01-400-font-family: "Barlow", sans-serif;
-  --lawyer-heading-01-400-font-weight: 400;
-  --lawyer-heading-01-400-font-size: 48px;
-  --lawyer-heading-01-400-letter-spacing: 0px;
-  --lawyer-heading-01-400-line-height: 56px;
-  --lawyer-heading-01-400-font-style: normal;
-
-  --lawyer-heading-03-400-font-family: "Barlow", sans-serif;
-  --lawyer-heading-03-400-font-weight: 400;
-  --lawyer-heading-03-400-font-size: 32px;
-  --lawyer-heading-03-400-letter-spacing: 0px;
-  --lawyer-heading-03-400-line-height: 40px;
-  --lawyer-heading-03-400-font-style: normal;
-
-  --lawyer-heading-04-600-font-family: "Barlow", sans-serif;
-  --lawyer-heading-04-600-font-weight: 600;
-  --lawyer-heading-04-600-font-size: 32px;
-  --lawyer-heading-04-600-letter-spacing: 0px;
-  --lawyer-heading-04-600-line-height: 40px;
-  --lawyer-heading-04-600-font-style: normal;
-
-  --lawyer-body-XL-400-font-family: "Barlow", sans-serif;
-  --lawyer-body-XL-400-font-weight: 400;
-  --lawyer-body-XL-400-font-size: 20px;
-  --lawyer-body-XL-400-letter-spacing: 0px;
-  --lawyer-body-XL-400-line-height: 32px;
-  --lawyer-body-XL-400-font-style: normal;
-
-  --lawyer-body-XL-500-font-family: "Barlow", sans-serif;
-  --lawyer-body-XL-500-font-weight: 500;
-  --lawyer-body-XL-500-font-size: 20px;
-  --lawyer-body-XL-500-letter-spacing: 0px;
-  --lawyer-body-XL-500-line-height: 32px;
-  --lawyer-body-XL-500-font-style: normal;
-
-  --lawyer-body-XL-600-font-family: "Barlow", sans-serif;
-  --lawyer-body-XL-600-font-weight: 600;
-  --lawyer-body-XL-600-font-size: 20px;
-  --lawyer-body-XL-600-letter-spacing: 0px;
-  --lawyer-body-XL-600-line-height: 32px;
-  --lawyer-body-XL-600-font-style: normal;
-
-  --lawyer-body-regular-400-font-family: "Barlow", sans-serif;
-  --lawyer-body-regular-400-font-weight: 400;
-  --lawyer-body-regular-400-font-size: 16px;
-  --lawyer-body-regular-400-letter-spacing: 0px;
-  --lawyer-body-regular-400-line-height: 24px;
-  --lawyer-body-regular-400-font-style: normal;
-
-  --lawyer-body-regular-500-font-family: "Barlow", sans-serif;
-  --lawyer-body-regular-500-font-weight: 500;
-  --lawyer-body-regular-500-font-size: 16px;
-  --lawyer-body-regular-500-letter-spacing: 0px;
-  --lawyer-body-regular-500-line-height: 24px;
-  --lawyer-body-regular-500-font-style: normal;
-
-  --lawyer-body-regular-600-font-family: "Barlow", sans-serif;
-  --lawyer-body-regular-600-font-weight: 600;
-  --lawyer-body-regular-600-font-size: 16px;
-  --lawyer-body-regular-600-letter-spacing: 0px;
-  --lawyer-body-regular-600-line-height: 24px;
-  --lawyer-body-regular-600-font-style: normal;
-
-  --lawyer-body-small-400-font-family: "Barlow", sans-serif;
-  --lawyer-body-small-400-font-weight: 400;
-  --lawyer-body-small-400-font-size: 14px;
-  --lawyer-body-small-400-letter-spacing: 0px;
-  --lawyer-body-small-400-line-height: 20px;
-  --lawyer-body-small-400-font-style: normal;
-
-  --lawyer-body-small-500-font-family: "Barlow", sans-serif;
-  --lawyer-body-small-500-font-weight: 500;
-  --lawyer-body-small-500-font-size: 14px;
-  --lawyer-body-small-500-letter-spacing: 0px;
-  --lawyer-body-small-500-line-height: 20px;
-  --lawyer-body-small-500-font-style: normal;
-
-  --lawyer-body-small-600-font-family: "Barlow", sans-serif;
-  --lawyer-body-small-600-font-weight: 600;
-  --lawyer-body-small-600-font-size: 14px;
-  --lawyer-body-small-600-letter-spacing: 0px;
-  --lawyer-body-small-600-line-height: 20px;
-  --lawyer-body-small-600-font-style: normal;
-
-  --lawyer-body-XXL-500-font-family: "Barlow", sans-serif;
-  --lawyer-body-XXL-500-font-weight: 500;
-  --lawyer-body-XXL-500-font-size: 24px;
-  --lawyer-body-XXL-500-letter-spacing: 0px;
-  --lawyer-body-XXL-500-line-height: 32px;
-  --lawyer-body-XXL-500-font-style: normal;
-
-  --developer-body-regular-400-font-family: "Inter", sans-serif;
-  --developer-body-regular-400-font-weight: 400;
-  --developer-body-regular-400-font-size: 16px;
-  --developer-body-regular-400-letter-spacing: 0px;
-  --developer-body-regular-400-line-height: 24px;
-  --developer-body-regular-400-font-style: normal;
 }
-*{
+
+/* =========================================================
+   BASE RESET
+   ========================================================= */
+* {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+
 html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
   min-height: 100%;
   background-color: #ffffff;
   font-family: var(--font);
   color: var(--text-900);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 button:focus-visible {
   outline: 2px solid #4a90e2 !important;
-}
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: 2px solid var(--photographer-500) !important;
 }
 
 .element-photographer {
   position: relative;
   width: 100%;
   max-width: 1920px;
+  margin: 0 auto;
   background-color: #ffffff;
   overflow-x: hidden;
   font-family: var(--font);
 }
 
-.element-photographer .img{
+/* =========================================================
+   SHARED COMPONENTS & BUTTONS
+   ========================================================= */
+.element-photographer .img {
   position: relative;
   width: 24px;
   height: 24px;
   flex-shrink: 0;
 }
 
-.element-photographer .button{
+/* Solid Green Button */
+.element-photographer .button {
   all: unset;
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
-  justify-self: center;
-  height: 48px;
-  width: 187px;
+  justify-content: center;
   gap: 12px;
-  padding: 0 15px;
+  height: 48px;
+  padding: 0 32px;
   background-color: var(--photographer-500);
   border-radius: 100px;
-  border: 100px;
   cursor: pointer;
-  transition: background-color 0.25s ease, transfom 0.25s ease, box-shadow 0.25s ease;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.element-photographer .button:hover{
-
+.element-photographer .button:hover {
+  background-color: var(--photographer-600);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(45, 178, 74, 0.3);
 }
 
 .element-photographer .button-2,
 .element-photographer .button-4,
-.elment-photographer .button-7{
+.element-photographer .button-7 {
   font-family: var(--font);
   font-weight: 600;
   font-size: 16px;
@@ -210,11 +111,12 @@ textarea:focus-visible {
   color: #ffffff;
 }
 
-.element-photographer .button-7{
+.element-photographer .button-7 {
   color: var(--photographer-500);
 }
 
-.element-photographer .button-3{
+/* Outline White Button */
+.element-photographer .button-3 {
   all: unset;
   box-sizing: border-box;
   display: inline-flex;
@@ -226,11 +128,17 @@ textarea:focus-visible {
   border: 2px solid #ffffff;
   border-radius: 100px;
   cursor: pointer;
-  transition: background-color 0.25 ease, transform 0.25s ease;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
+.element-photographer .button-3:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Outline Green Buttons */
 .element-photographer .button-6,
-.elment-photographer .button-8{
+.element-photographer .button-8 {
   all: unset;
   box-sizing: border-box;
   display: inline-flex;
@@ -239,19 +147,22 @@ textarea:focus-visible {
   gap: 12px;
   height: 48px;
   padding: 0 32px;
+  border: 2px solid var(--photographer-500);
   border-radius: 100px;
   cursor: pointer;
-  transition: background-color 0.25 ease, transform 0.25 ease;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
-.elment-photographer .button-6:hover,
-.elment-photographer .button-8:hover {
-
+.element-photographer .button-6:hover,
+.element-photographer .button-8:hover {
+  background-color: var(--photographer-50);
+  transform: translateY(-2px);
 }
 
-.elment-photographer .text-wrapper-11,
-.elment-photographer .text-wrapper-13,
-.elment-photographer .text-wrapper-15 {
+/* Headings & Section Titles */
+.element-photographer .text-wrapper-11,
+.element-photographer .text-wrapper-13,
+.element-photographer .text-wrapper-15 {
   font-family: var(--font);
   font-weight: 400;
   font-size: 32px;
@@ -278,12 +189,11 @@ textarea:focus-visible {
   color: var(--text-600);
 }
 
+/* Logo */
 .element-photographer .logo {
-  height: 32px;
-  width: 150px;
   display: inline-flex;
   align-items: center;
-  font-size: 9px;
+  gap: 12px;
 }
 
 .element-photographer .favicon {
@@ -302,15 +212,17 @@ textarea:focus-visible {
   font-size: 24px;
   line-height: 24px;
   color: var(--photographer-500);
-
 }
 
+/* =========================================================
+   HEADER & NAVIGATION
+   ========================================================= */
 .element-photographer .header {
   position: relative;
   width: 100%;
   background-color: var(--navy);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -319,6 +231,7 @@ textarea:focus-visible {
   width: 100%;
   max-width: 1320px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 48px;
@@ -327,37 +240,12 @@ textarea:focus-visible {
 }
 
 .element-photographer .header .text-wrapper {
-  /* max-width: 536px;
+  max-width: 536px;
   width: 100%;
   font-weight: 400;
   font-size: clamp(32px, 4vw, 48px);
   line-height: 1.2;
-  color: #ffffff; */
-
-  /* Hello, I’m Robert. I’m expert in to capture all the feelings. */
-
-width: 536px;
-height: 168px;
-
-/* Lawyer/Heading/01, 400 */
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 400;
-font-size: 39px;
-line-height: 47px;
-margin-left: 198px;
-margin-top: 30px;
-/* or 117% */
-
-/* Gray/White */
-color: #FFFFFF;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
+  color: #ffffff;
 }
 
 .element-photographer .header .div-2 {
@@ -369,12 +257,6 @@ flex-grow: 0;
   width: 100%;
 }
 
-.element-photographer .header .div-3 {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
 .element-photographer .header .p {
   max-width: 536px;
   width: 100%;
@@ -383,6 +265,13 @@ flex-grow: 0;
   color: var(--text-200);
 }
 
+.element-photographer .header .div-3 {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Navigation Bar */
 .element-photographer .navigation {
   position: absolute;
   top: 0;
@@ -409,7 +298,8 @@ flex-grow: 0;
 
 .element-photographer .navbar {
   display: flex;
-  gap: 15px;
+  align-items: center;
+  gap: 32px;
   flex-wrap: wrap;
 }
 
@@ -420,7 +310,7 @@ flex-grow: 0;
   line-height: 24px;
   white-space: nowrap;
   cursor: pointer;
-  transition: color 0.2 ease;
+  transition: color 0.2s ease;
 }
 
 .element-photographer .text-wrapper-4 {
@@ -439,6 +329,7 @@ flex-grow: 0;
   margin-left: 8px;
 }
 
+/* Header Photo Strip */
 .element-photographer .all-photo {
   position: relative;
   width: 100%;
@@ -460,6 +351,14 @@ flex-grow: 0;
   flex-shrink: 0;
 }
 
+.element-photographer .all-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.4s ease;
+}
+
 .element-photographer .all-photo > div:hover img {
   transform: translateY(-6px);
 }
@@ -471,7 +370,7 @@ flex-grow: 0;
 .element-photographer .all-photo > div:nth-child(5) img { content: url("img/Images (4).png"); }
 .element-photographer .all-photo > div:nth-child(6) img { content: url("img/Images (5).png"); }
 
-
+/* Floating Dark / Light Mode Button */
 .element-photographer .dark-light-mode {
   position: fixed;
   bottom: 30px;
@@ -487,12 +386,12 @@ flex-grow: 0;
   border-radius: 100px;
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(19, 34, 56, 0.25);
-  transition: transform 0.2s ease, backgound-color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .element-photographer .dark-light-mode:hover {
   transform: scale(1.08);
-  background-color: var(--text-600);
+  background-color: var(--photographer-600);
 }
 
 .element-photographer .dark-light-mode img {
@@ -506,6 +405,9 @@ flex-grow: 0;
   color: #ffffff;
 }
 
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
 .element-photographer .about {
   display: flex;
   flex-wrap: wrap;
@@ -537,7 +439,7 @@ flex-grow: 0;
   justify-content: space-between;
   padding: 24px;
   background-color: #ffffff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
 .element-photographer .fun-fact .content {
@@ -583,7 +485,7 @@ flex-grow: 0;
 .element-photographer .about .div-5 {
   display: flex;
   flex-direction: column;
-  gap: 12px
+  gap: 12px;
 }
 
 .element-photographer .about .div-3 {
@@ -649,6 +551,20 @@ flex-grow: 0;
   content: url("img/ChatCenteredDots (1).png");
 }
 
+/* =========================================================
+   GALLERY SECTION
+   ========================================================= */
+.element-photographer .gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 100px 32px;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  box-shadow: inset 0 1px 0 var(--border);
+}
+
 .element-photographer .heading {
   display: flex;
   width: 100%;
@@ -661,6 +577,8 @@ flex-grow: 0;
 .element-photographer .button-6 .img,
 .element-photographer .button-8 .img {
   content: url("img/ArrowRight (2).png");
+  width: 24px;
+  height: 24px;
 }
 
 .element-photographer .gallery .div-8 {
@@ -683,8 +601,17 @@ flex-grow: 0;
   width: 100%;
   height: auto;
   object-fit: cover;
-  transition: filter 0.3s ease, transform 0.3 ease;
+  transition: filter 0.3s ease, transform 0.3s ease;
   cursor: pointer;
+}
+
+.element-photographer .gallery .div-8 img:hover {
+  filter: brightness(1.06);
+  transform: scale(1.015);
+}
+
+.element-photographer .image {
+  height: 312px;
 }
 
 .element-photographer .gallery .div-4:nth-child(1) .image:nth-child(1) { content: url("img/Image.png"); }
@@ -695,9 +622,10 @@ flex-grow: 0;
 .element-photographer .image-3 {
   height: 480px;
 }
+
 .element-photographer .image-2 {
-  content: var(--blank);
-  background: url("img/2.png") no-repeat center top / cover;
+  content: url("img/Image (9).png");
+  object-fit: cover;
 }
 
 .element-photographer .image-3 {
@@ -713,6 +641,9 @@ flex-grow: 0;
 .element-photographer .gallery .div-4:nth-child(3) .image-4:nth-child(3) { content: url("img/Image (6).png"); }
 .element-photographer .gallery .div-4:nth-child(3) .image-4:nth-child(4) { content: url("img/Image (7).png"); }
 
+/* =========================================================
+   SERVICES SECTION
+   ========================================================= */
 .element-photographer .my-services {
   display: flex;
   flex-direction: column;
@@ -749,12 +680,12 @@ flex-grow: 0;
   padding: 32px;
   background-color: #ffffff;
   border: 1px solid var(--border);
-  transition: border-color 0.25s ease, box-shadow 0.25 ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .element-photographer .services:hover {
   border-color: var(--photographer-100);
-  box-shadow: border-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 8px 24px rgba(45, 178, 74, 0.06);
 }
 
 .element-photographer .services-2 {
@@ -778,7 +709,6 @@ flex-grow: 0;
 .element-photographer .services:nth-child(1) .img-3 { content: url("img/SmileySticker.png"); }
 .element-photographer .services-2 .img-3 { content: url("img/PresentationChart.png"); }
 .element-photographer .services:nth-child(3) .img-3 { content: url("img/Compass.png"); }
-
 
 .element-photographer .portrait-fashion {
   font-weight: 500;
@@ -810,7 +740,10 @@ flex-grow: 0;
   object-fit: cover;
 }
 
-.element-photographer .pricing-plan {
+/* =========================================================
+   PRICING PLANS SECTION
+   ========================================================= */
+.element-photographer .pricing-plans {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -820,7 +753,7 @@ flex-grow: 0;
   background-color: var(--bg-gray);
 }
 
-.element-photographer .pricing-plan .div-8 {
+.element-photographer .pricing-plans .div-8 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -840,7 +773,7 @@ flex-grow: 0;
   gap: 32px;
   padding: 48px;
   background-color: #ffffff;
-  transition: transform 0.3 ease, box-shadow 0.3 ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .element-photographer .pricing-plan:hover {
@@ -889,7 +822,7 @@ flex-grow: 0;
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: var(--photographer-100);
+  color: var(--photographer-500);
   white-space: nowrap;
 }
 
@@ -973,11 +906,11 @@ flex-grow: 0;
   background-color: var(--photographer-500);
   border-radius: 100px;
   cursor: pointer;
-  transition: background-color 0.25s ease, box-shadow 0.25 ease;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .element-photographer .button-9:hover {
-  background-color: var(--text-600);
+  background-color: var(--photographer-600);
   box-shadow: 0 8px 20px rgba(45, 178, 74, 0.3);
 }
 
@@ -985,6 +918,9 @@ flex-grow: 0;
   content: url("img/ArrowRight (1).png");
 }
 
+/* =========================================================
+   BLOG & NEWS SECTION
+   ========================================================= */
 .element-photographer .blog-news {
   display: flex;
   flex-direction: column;
@@ -1000,7 +936,7 @@ flex-grow: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24;
+  gap: 24px;
   width: 100%;
 }
 
@@ -1014,7 +950,7 @@ flex-grow: 0;
   background-size: cover;
   background-position: 50% 50%;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3 ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .element-photographer .article:hover,
@@ -1026,6 +962,11 @@ flex-grow: 0;
 
 .element-photographer .article { background-image: url("img/Article.png"); }
 .element-photographer .article-2 { background-image: url("img/Article (1).png"); }
+
+.element-photographer .heading-wrapper {
+  background-image: url("img/Article (2).png");
+  overflow: hidden;
+}
 
 .element-photographer .heading-wrapper::before {
   content: "";
@@ -1041,12 +982,12 @@ flex-grow: 0;
   right: 32px;
   display: flex;
   flex-direction: column;
-  gap: 8px
+  gap: 8px;
 }
 
 .element-photographer .heading-2 .div-6 {
   display: flex;
-  gap: 8px
+  gap: 8px;
 }
 
 .element-photographer .text-wrapper-21 {
@@ -1063,6 +1004,9 @@ flex-grow: 0;
   color: #ffffff;
 }
 
+/* =========================================================
+   LATEST INSTAGRAM SECTION
+   ========================================================= */
 .element-photographer .latest-instagram {
   display: flex;
   flex-direction: column;
@@ -1091,14 +1035,15 @@ flex-grow: 0;
 .element-photographer .social-media-wrapper {
   position: relative;
   flex: 1 1 140px;
+  max-width: 200px;
   aspect-ratio: 1 / 1;
   background-size: cover;
   background-position: 50% 50%;
   cursor: pointer;
-  transition: transform 0.3 ease;
+  transition: transform 0.3s ease;
 }
 
-.element-photographer .latest-instagram .div-8 > div:hover{
+.element-photographer .latest-instagram .div-8 > div:hover {
   transform: scale(1.04);
 }
 
@@ -1121,6 +1066,9 @@ flex-grow: 0;
   height: 24px;
 }
 
+/* =========================================================
+   FOOTER / CONTACT SECTION
+   ========================================================= */
 .element-photographer .footer {
   display: flex;
   flex-direction: column;
@@ -1136,7 +1084,8 @@ flex-grow: 0;
   align-items: flex-start;
   justify-content: center;
   gap: 48px;
-  width: 1320px;
+  width: 100%;
+  max-width: 1320px;
   padding: 56px 40px;
   background-color: #ffffff;
 }
@@ -1176,6 +1125,12 @@ flex-grow: 0;
 .element-photographer .contat .div-4 {
   display: flex;
   flex-direction: column;
+  gap: 16px;
+}
+
+.element-photographer .div-10 {
+  display: flex;
+  align-items: center;
   gap: 16px;
 }
 
@@ -1290,6 +1245,7 @@ flex-grow: 0;
   flex-wrap: wrap;
 }
 
+/* Form Controls */
 .element-photographer .input-field,
 .element-photographer .input-field-wrapper,
 .element-photographer .input-field-2,
@@ -1337,7 +1293,7 @@ flex-grow: 0;
 }
 
 .element-photographer .text-wrapper-29,
-.element-photographer  .danger {
+.element-photographer .danger {
   position: absolute;
   top: 11px;
   left: 18px;
@@ -1368,7 +1324,7 @@ flex-grow: 0;
   transform: translateY(-70%) rotate(45deg);
 }
 
-.element-photographer .input-field::after {
+.element-photographer .input-field-3::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1376,6 +1332,7 @@ flex-grow: 0;
   width: 18px;
   height: 16px;
   border: 2px solid var(--text-600);
+  border-top-width: 5px;
   border-radius: 3px;
   transform: translateY(-50%);
 }
@@ -1385,6 +1342,7 @@ flex-grow: 0;
   top: 0;
   left: 0;
   width: 100%;
+  height: 48px;
   padding: 0 18px;
   font-family: var(--font);
   font-size: 16px;
@@ -1395,10 +1353,11 @@ flex-grow: 0;
   outline: none;
 }
 
-.element-photographer  .contat .button .img {
+.element-photographer .contat .button .img {
   content: url("img/PaperPlaneRight.png");
 }
 
+/* Bottom Bar */
 .element-photographer .footer-2 {
   display: flex;
   width: 100%;
@@ -1446,4 +1405,259 @@ flex-grow: 0;
   font-size: 14px;
   line-height: 20px;
   color: var(--text-600);
+}
+
+/* =========================================================
+   DARK MODE STYLES
+   ========================================================= */
+body.dark-theme {
+  background-color: #0b1320;
+  color: #f0f1f3;
+  --navy: #08101c;
+  --text-900: #f0f1f3;
+  --text-700: #c3c7ce;
+  --text-600: #a5acb5;
+  --text-400: #87909d;
+  --text-300: #556070;
+  --text-200: #424e60;
+  --border: #1e2d42;
+  --bg-gray: #0e1a2b;
+}
+
+body.dark-theme .element-photographer,
+body.dark-theme .fun-fact,
+body.dark-theme .services,
+body.dark-theme .pricing-plan,
+body.dark-theme .contat,
+body.dark-theme .input-field,
+body.dark-theme .input-field-wrapper,
+body.dark-theme .input-field-2,
+body.dark-theme .select,
+body.dark-theme .input-field-3,
+body.dark-theme .input-field-4 {
+  background-color: #132238 !important;
+  color: #ffffff !important;
+  border-color: #21344e !important;
+}
+
+body.dark-theme .text-wrapper-6,
+body.dark-theme .text-wrapper-9,
+body.dark-theme .text-wrapper-11,
+body.dark-theme .text-wrapper-13,
+body.dark-theme .text-wrapper-15,
+body.dark-theme .text-wrapper-17,
+body.dark-theme .portrait-fashion,
+body.dark-theme .text-wrapper-23,
+body.dark-theme .text-wrapper-26,
+body.dark-theme .text-wrapper-27,
+body.dark-theme .text-wrapper-28,
+body.dark-theme .text-wrapper-30 {
+  color: #ffffff !important;
+}
+
+body.dark-theme .text-wrapper-7,
+body.dark-theme .text-wrapper-10,
+body.dark-theme .text-wrapper-12,
+body.dark-theme .text-wrapper-14,
+body.dark-theme .text-wrapper-18,
+body.dark-theme .text-wrapper-24,
+body.dark-theme .text-wrapper-25,
+body.dark-theme .text-wrapper-31,
+body.dark-theme .text-wrapper-32 {
+  color: #a5acb5 !important;
+}
+
+body.dark-theme .input {
+  color: #ffffff !important;
+}
+
+body.dark-theme .services-2 {
+  background-color: #182b46 !important;
+}
+
+body.dark-theme .connnect-with-me {
+  background-color: #0d1a2d !important;
+}
+
+body.dark-theme .footer,
+body.dark-theme .footer-2,
+body.dark-theme .pricing-plans {
+  background-color: #0a1424 !important;
+}
+
+/* =========================================================
+   HAMBURGER MENU TOGGLE
+   ========================================================= */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  padding: 0;
+}
+
+.menu-toggle span {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* =========================================================
+   GALLERY LIGHTBOX MODAL
+   ========================================================= */
+.gallery-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background-color: rgba(9, 19, 34, 0.92);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.gallery-modal.active {
+  display: flex;
+}
+
+.gallery-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-modal-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-modal-close {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-modal-close:hover {
+  transform: scale(1.2);
+}
+
+/* =========================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================= */
+@media (max-width: 992px) {
+  .element-photographer .navigation {
+    padding: 16px 24px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .element-photographer .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--navy);
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    gap: 20px;
+    display: none;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .element-photographer .navbar.active {
+    display: flex;
+  }
+
+  .element-photographer .navbar .button {
+    margin-left: 0;
+  }
+
+  .element-photographer .header .div {
+    padding: 140px 24px 160px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .element-photographer .header .div-2 {
+    align-items: center;
+  }
+
+  .element-photographer .about {
+    flex-direction: column;
+    padding: 60px 24px;
+  }
+
+  .element-photographer .about .photo {
+    width: 100%;
+    max-width: 100%;
+    height: 380px;
+  }
+
+  .element-photographer .fun-fact {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: -60px;
+    z-index: 6;
+  }
+
+  .element-photographer .fun-fact .content {
+    flex: 1 1 40%;
+  }
+
+  .element-photographer .devider {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .element-photographer .all-photo > div {
+    flex: 1 1 140px;
+    height: 260px;
+  }
+
+  .element-photographer .gallery .div-4 {
+    flex: 1 1 100%;
+  }
+
+  .element-photographer .pricing-plan {
+    padding: 32px 24px;
+  }
+
+  .element-photographer .contat {
+    padding: 32px 20px;
+  }
+
+  .element-photographer .contat .div-3 {
+    flex-direction: column;
+  }
 }
