@@ -1,9 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
-
-/* =========================================================
-   DESIGN TOKENS & VARIABLES
-   ========================================================= */
 :root {
   --photographer-50: #eaf7ed;
   --photographer-100: #d5f0db;
@@ -22,13 +18,9 @@
 
   --font: "Barlow", Helvetica, Arial, sans-serif;
 
-  /* Transparent fallback data URI */
   --blank: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
 }
 
-/* =========================================================
-   BASE RESET
-   ========================================================= */
 * {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
@@ -68,9 +60,6 @@ button:focus-visible {
   font-family: var(--font);
 }
 
-/* =========================================================
-   SHARED COMPONENTS & BUTTONS
-   ========================================================= */
 .element-photographer .img {
   position: relative;
   width: 24px;
@@ -78,7 +67,6 @@ button:focus-visible {
   flex-shrink: 0;
 }
 
-/* Solid Green Button */
 .element-photographer .button {
   all: unset;
   box-sizing: border-box;
@@ -115,7 +103,6 @@ button:focus-visible {
   color: var(--photographer-500);
 }
 
-/* Outline White Button */
 .element-photographer .button-3 {
   all: unset;
   box-sizing: border-box;
@@ -136,7 +123,6 @@ button:focus-visible {
   transform: translateY(-2px);
 }
 
-/* Outline Green Buttons */
 .element-photographer .button-6,
 .element-photographer .button-8 {
   all: unset;
@@ -159,7 +145,6 @@ button:focus-visible {
   transform: translateY(-2px);
 }
 
-/* Headings & Section Titles */
 .element-photographer .text-wrapper-11,
 .element-photographer .text-wrapper-13,
 .element-photographer .text-wrapper-15 {
@@ -189,7 +174,6 @@ button:focus-visible {
   color: var(--text-600);
 }
 
-/* Logo */
 .element-photographer .logo {
   display: inline-flex;
   align-items: center;
@@ -214,9 +198,6 @@ button:focus-visible {
   color: var(--photographer-500);
 }
 
-/* =========================================================
-   HEADER & NAVIGATION
-   ========================================================= */
 .element-photographer .header {
   position: relative;
   width: 100%;
@@ -271,7 +252,6 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
-/* Navigation Bar */
 .element-photographer .navigation {
   position: absolute;
   top: 0;
@@ -329,7 +309,6 @@ button:focus-visible {
   margin-left: 8px;
 }
 
-/* Header Photo Strip */
 .element-photographer .all-photo {
   position: relative;
   width: 100%;
@@ -347,7 +326,7 @@ button:focus-visible {
   position: relative;
   flex: 1 1 170px;
   max-width: 312px;
-  height: 488px;
+  height: 450px;
   flex-shrink: 0;
 }
 
@@ -370,7 +349,6 @@ button:focus-visible {
 .element-photographer .all-photo > div:nth-child(5) img { content: url("img/Images (4).png"); }
 .element-photographer .all-photo > div:nth-child(6) img { content: url("img/Images (5).png"); }
 
-/* Floating Dark / Light Mode Button */
 .element-photographer .dark-light-mode {
   position: fixed;
   bottom: 30px;
@@ -405,9 +383,6 @@ button:focus-visible {
   color: #ffffff;
 }
 
-/* =========================================================
-   ABOUT SECTION
-   ========================================================= */
 .element-photographer .about {
   display: flex;
   flex-wrap: wrap;
@@ -551,9 +526,6 @@ button:focus-visible {
   content: url("img/ChatCenteredDots (1).png");
 }
 
-/* =========================================================
-   GALLERY SECTION
-   ========================================================= */
 .element-photographer .gallery {
   display: flex;
   flex-direction: column;
@@ -562,52 +534,81 @@ button:focus-visible {
   width: 100%;
   max-width: 1320px;
   margin: 0 auto;
-  box-shadow: inset 0 1px 0 var(--border);
+  border-top: 1px solid var(--border);
 }
 
 .element-photographer .heading {
   display: flex;
   width: 100%;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.element-photographer .button-6 .img,
-.element-photographer .button-8 .img {
+.element-photographer .button-6 {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 48px;
+  padding: 0 32px;
+  border: 2px solid var(--photographer-500);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.element-photographer .button-6:hover {
+  background-color: var(--photographer-500);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(45, 178, 74, 0.25);
+}
+
+.element-photographer .button-6:hover .button-7 {
+  color: #ffffff;
+}
+
+.element-photographer .button-6:hover .img {
+  filter: brightness(0) invert(1);
+}
+
+.element-photographer .button-6 .img {
   content: url("img/ArrowRight (2).png");
   width: 24px;
   height: 24px;
+  transition: filter 0.25s ease;
 }
 
 .element-photographer .gallery .div-8 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   width: 100%;
 }
 
 .element-photographer .gallery .div-4 {
-  flex: 1 1 280px;
-  max-width: 424px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  width: 100%;
 }
 
 .element-photographer .gallery img {
   width: 100%;
-  height: auto;
   object-fit: cover;
-  transition: filter 0.3s ease, transform 0.3s ease;
+  border-radius: 4px;
+  transition: filter 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(19, 34, 56, 0.04);
 }
 
-.element-photographer .gallery .div-8 img:hover {
-  filter: brightness(1.06);
-  transform: scale(1.015);
+.element-photographer .gallery img:hover {
+  filter: brightness(1.05);
+  transform: scale(1.02);
+  box-shadow: 0 12px 28px rgba(19, 34, 56, 0.14);
 }
 
 .element-photographer .image {
@@ -624,12 +625,13 @@ button:focus-visible {
 }
 
 .element-photographer .image-2 {
-  content: url("img/Image (9).png");
+  content: url("img/anhhoa.jpg");
   object-fit: cover;
 }
 
 .element-photographer .image-3 {
   content: url("img/Image (3).png");
+  object-fit: cover;
 }
 
 .element-photographer .image-4 {
@@ -641,9 +643,6 @@ button:focus-visible {
 .element-photographer .gallery .div-4:nth-child(3) .image-4:nth-child(3) { content: url("img/Image (6).png"); }
 .element-photographer .gallery .div-4:nth-child(3) .image-4:nth-child(4) { content: url("img/Image (7).png"); }
 
-/* =========================================================
-   SERVICES SECTION
-   ========================================================= */
 .element-photographer .my-services {
   display: flex;
   flex-direction: column;
@@ -652,7 +651,7 @@ button:focus-visible {
   width: 100%;
   max-width: 1320px;
   margin: 0 auto;
-  box-shadow: inset 0 1px 0 var(--border);
+  border-top: 1px solid var(--border);
 }
 
 .element-photographer .section {
@@ -665,7 +664,7 @@ button:focus-visible {
 }
 
 .element-photographer .section > .div-4 {
-  flex: 1 1 400px;
+  flex: 1 1 420px;
   max-width: 536px;
   display: flex;
   flex-direction: column;
@@ -680,18 +679,28 @@ button:focus-visible {
   padding: 32px;
   background-color: #ffffff;
   border: 1px solid var(--border);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 4px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
 }
 
 .element-photographer .services:hover {
-  border-color: var(--photographer-100);
-  box-shadow: 0 8px 24px rgba(45, 178, 74, 0.06);
+  border-color: var(--photographer-500);
+  box-shadow: 0 8px 24px rgba(45, 178, 74, 0.08);
+  transform: translateX(4px);
 }
 
 .element-photographer .services-2 {
   padding: 31px;
   border: 2px solid var(--photographer-500);
-  box-shadow: 0 8px 24px rgba(45, 178, 74, 0.08);
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(45, 178, 74, 0.1);
+  background-color: #ffffff;
+}
+
+.element-photographer .services-2:hover {
+  transform: translateX(4px);
+  box-shadow: 0 12px 28px rgba(45, 178, 74, 0.15);
 }
 
 .element-photographer .section .div-5 {
@@ -704,6 +713,7 @@ button:focus-visible {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .element-photographer .services:nth-child(1) .img-3 { content: url("img/SmileySticker.png"); }
@@ -711,7 +721,7 @@ button:focus-visible {
 .element-photographer .services:nth-child(3) .img-3 { content: url("img/Compass.png"); }
 
 .element-photographer .portrait-fashion {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
   line-height: 32px;
   color: var(--text-900);
@@ -724,25 +734,30 @@ button:focus-visible {
 }
 
 .element-photographer .photo-2 {
-  flex: 1 1 400px;
+  flex: 1 1 450px;
   max-width: 648px;
   display: flex;
   gap: 24px;
-  justify-content: center;
+  align-items: stretch;
 }
 
 .element-photographer .element-4,
 .element-photographer .element-5,
 .element-photographer .element-6 {
-  flex: 1 1 180px;
-  max-width: 312px;
-  height: auto;
+  flex: 1 1 0;
+  width: 100%;
+  height: 428px;
   object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(19, 34, 56, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* =========================================================
-   PRICING PLANS SECTION
-   ========================================================= */
+.element-photographer .photo-2 img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(19, 34, 56, 0.15);
+}
+
 .element-photographer .pricing-plans {
   display: flex;
   flex-direction: column;
@@ -918,9 +933,6 @@ button:focus-visible {
   content: url("img/ArrowRight (1).png");
 }
 
-/* =========================================================
-   BLOG & NEWS SECTION
-   ========================================================= */
 .element-photographer .blog-news {
   display: flex;
   flex-direction: column;
@@ -949,6 +961,8 @@ button:focus-visible {
   height: 424px;
   background-size: cover;
   background-position: 50% 50%;
+  border-radius: 12px;
+  overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -957,22 +971,20 @@ button:focus-visible {
 .element-photographer .article-2:hover,
 .element-photographer .heading-wrapper:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(19, 34, 56, 0.15);
+  box-shadow: 0 16px 40px rgba(19, 34, 56, 0.18);
 }
 
 .element-photographer .article { background-image: url("img/Article.png"); }
 .element-photographer .article-2 { background-image: url("img/Article (1).png"); }
+.element-photographer .heading-wrapper { background-image: url("img/Article (2).png"); }
 
-.element-photographer .heading-wrapper {
-  background-image: url("img/Article (2).png");
-  overflow: hidden;
-}
-
+.element-photographer .article::before,
+.element-photographer .article-2::before,
 .element-photographer .heading-wrapper::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 12, 16, 0) 50%, rgba(10, 12, 16, 0.95) 80%);
+  z-index: 1;
 }
 
 .element-photographer .heading-2 {
@@ -983,6 +995,7 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  z-index: 2;
 }
 
 .element-photographer .heading-2 .div-6 {
@@ -993,7 +1006,7 @@ button:focus-visible {
 .element-photographer .text-wrapper-21 {
   font-size: 14px;
   line-height: 20px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.75);
   white-space: nowrap;
 }
 
@@ -1004,9 +1017,6 @@ button:focus-visible {
   color: #ffffff;
 }
 
-/* =========================================================
-   LATEST INSTAGRAM SECTION
-   ========================================================= */
 .element-photographer .latest-instagram {
   display: flex;
   flex-direction: column;
@@ -1066,9 +1076,6 @@ button:focus-visible {
   height: 24px;
 }
 
-/* =========================================================
-   FOOTER / CONTACT SECTION
-   ========================================================= */
 .element-photographer .footer {
   display: flex;
   flex-direction: column;
@@ -1079,27 +1086,30 @@ button:focus-visible {
 }
 
 .element-photographer .contat {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 420px 1fr;
   gap: 48px;
   width: 100%;
   max-width: 1320px;
-  padding: 56px 40px;
+  padding: 56px 48px;
   background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 16px rgba(19, 34, 56, 0.02);
+  margin-bottom: 80px;
 }
 
-.element-photographer .contat > .div-2 {
-  flex: 1 1 350px;
-  max-width: 424px;
+.element-photographer .contat > .div-2:first-child {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  padding-right: 36px;
+  border-right: 1px solid var(--border);
 }
 
 .element-photographer .contat > .div-2:last-child {
-  max-width: 666px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .element-photographer .contat .div-9 {
@@ -1110,14 +1120,14 @@ button:focus-visible {
 }
 
 .element-photographer .text-wrapper-23 {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 34px;
   color: var(--text-900);
 }
 
 .element-photographer .text-wrapper-24 {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 24px;
   color: var(--text-600);
 }
@@ -1125,7 +1135,7 @@ button:focus-visible {
 .element-photographer .contat .div-4 {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .element-photographer .div-10 {
@@ -1136,35 +1146,37 @@ button:focus-visible {
 
 .element-photographer .icon {
   display: flex;
-  padding: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   background-color: var(--photographer-50);
   border-radius: 100px;
+  flex-shrink: 0;
 }
 
-.element-photographer .icon img[src*="phone-call"] {
-  content: url("img/PhoneCall.png");
-}
-
-.element-photographer .icon img[src*="envelope"] {
-  content: url("img/ChatCenteredDots (1).png");
+.element-photographer .icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
 .element-photographer .content-2 {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .element-photographer .text-wrapper-25 {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 18px;
   color: var(--text-600);
 }
 
 .element-photographer .text-wrapper-26 {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
   color: var(--text-900);
 }
 
@@ -1172,14 +1184,15 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 32px;
+  padding: 28px 30px;
   background-color: var(--photographer-50);
+  border-radius: 4px;
 }
 
 .element-photographer .text-wrapper-27 {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
   color: var(--text-900);
 }
 
@@ -1187,65 +1200,76 @@ button:focus-visible {
   display: flex;
   align-items: center;
   gap: 12px;
-  flex-wrap: wrap;
 }
 
 .element-photographer .line-2 {
-  content: var(--blank);
-  width: 24px;
+  width: 20px;
   height: 2px;
   background-color: var(--photographer-500);
+  flex-shrink: 0;
 }
 
 .element-photographer .social-media-4,
 .element-photographer .social-media-5 {
-  width: 48px;
-  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   border-radius: 100px;
+  background-color: var(--photographer-500);
   cursor: pointer;
-  transition: transform 0.25s ease;
+  overflow: hidden;
+  transition: all 0.25s ease;
 }
 
-.element-photographer .social-media-4:hover,
-.element-photographer .social-media-5:hover {
-  transform: translateY(-3px);
+.element-photographer .social-media-5 {
+  background-color: var(--photographer-500);
+}
+
+.element-photographer .social-media-5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.element-photographer .social-media-4:hover {
+  background-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.element-photographer .social-media-4:hover img {
+  filter: none;
 }
 
 .element-photographer .social-media-4 img,
 .element-photographer .social-media-5 img {
-  width: 48px;
-  height: 48px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: filter 0.25s ease;
 }
 
-.element-photographer .social > div:nth-child(2) img { content: url("img/Social Media.png"); }
-.element-photographer .social > div:nth-child(3) img { content: url("img/Social Media (1).png"); }
-.element-photographer .social > div:nth-child(4) img { content: url("img/Social Media (6).png"); }
-.element-photographer .social > div:nth-child(5) img { content: url("img/Social Media (3).png"); }
-.element-photographer .social > div:nth-child(6) img { content: url("img/Social Media (4).png"); }
-
-.element-photographer .devider-2 {
-  content: var(--blank);
-  width: 1px;
-  height: 400px;
-  background-color: var(--border);
+.element-photographer .social-media-5 img.img-2 {
+  width: 13px;
+  height: 13px;
+  filter: brightness(0) invert(1);
 }
 
 .element-photographer .text-wrapper-28 {
   font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 26px;
+  line-height: 34px;
   color: var(--text-900);
-  white-space: nowrap;
 }
 
 .element-photographer .contat .div-3 {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   width: 100%;
-  flex-wrap: wrap;
 }
 
-/* Form Controls */
 .element-photographer .input-field,
 .element-photographer .input-field-wrapper,
 .element-photographer .input-field-2,
@@ -1253,35 +1277,44 @@ button:focus-visible {
 .element-photographer .input-field-3,
 .element-photographer .input-field-4 {
   position: relative;
-  flex: 1 1 200px;
-  height: 48px;
+  width: 100%;
   background-color: #ffffff;
   border: 1px solid var(--border);
+  border-radius: 4px;
   font-family: var(--font);
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 15px;
   color: var(--text-900);
   box-sizing: border-box;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .element-photographer .input-field,
 .element-photographer .input-field-wrapper {
-  padding: 0 18px;
+  height: 48px;
+  padding: 0 16px;
   outline: none;
 }
 
-.element-photographer .input-field-2,
-.element-photographer .input-field-4 {
-  flex: 1 1 100%;
+.element-photographer .input-field-2 {
+  grid-column: span 2;
+  height: 48px;
 }
 
 .element-photographer .input-field-4 {
-  height: 124px;
+  grid-column: span 2;
+  height: 130px;
+}
+
+.element-photographer .select,
+.element-photographer .input-field-3 {
+  height: 48px;
 }
 
 .element-photographer .input-field:focus,
 .element-photographer .input-field-wrapper:focus,
+.element-photographer .input-field-2:focus-within,
+.element-photographer .select:focus-within,
+.element-photographer .input-field-3:focus-within,
 .element-photographer .input-field-4:focus-within {
   border-color: var(--photographer-500);
 }
@@ -1290,62 +1323,43 @@ button:focus-visible {
 .element-photographer .input-field-wrapper::placeholder,
 .element-photographer .input::placeholder {
   color: var(--text-400);
-}
-
-.element-photographer .text-wrapper-29,
-.element-photographer .danger {
-  position: absolute;
-  top: 11px;
-  left: 18px;
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--text-400);
-  white-space: nowrap;
-}
-
-.element-photographer .danger {
-  color: var(--text-600);
-}
-
-.element-photographer .caret-down,
-.element-photographer .calendar-blank {
-  display: none;
+  font-size: 14px;
 }
 
 .element-photographer .select::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 16px;
   width: 7px;
   height: 7px;
   border-right: 2px solid var(--text-600);
   border-bottom: 2px solid var(--text-600);
   transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
 }
 
 .element-photographer .input-field-3::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 18px;
-  width: 18px;
+  right: 16px;
+  width: 16px;
   height: 16px;
-  border: 2px solid var(--text-600);
-  border-top-width: 5px;
-  border-radius: 3px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235F656E' viewBox='0 0 256 256'%3E%3Cpath d='M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM48,48H72v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48ZM208,208H48V96H208V208Z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .element-photographer .input {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 48px;
-  padding: 0 18px;
+  height: 100%;
+  padding: 0 16px;
   font-family: var(--font);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 24px;
   color: var(--text-900);
   background: transparent;
@@ -1353,8 +1367,45 @@ button:focus-visible {
   outline: none;
 }
 
+.element-photographer .input-field-4 textarea.input {
+  padding: 12px 16px;
+  height: 100%;
+  resize: none;
+}
+
+.element-photographer .contat .button {
+  margin-top: 8px;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 48px;
+  padding: 0 32px;
+  background-color: var(--photographer-500);
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.element-photographer .contat .button:hover {
+  background-color: var(--photographer-600);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(45, 178, 74, 0.3);
+}
+
+.element-photographer .contat .button .button-2 {
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 15px;
+  color: #ffffff;
+}
+
 .element-photographer .contat .button .img {
   content: url("img/PaperPlaneRight.png");
+  width: 20px;
+  height: 20px;
 }
 
 /* Bottom Bar */
@@ -1362,29 +1413,36 @@ button:focus-visible {
   display: flex;
   width: 100%;
   max-width: 1320px;
+  margin: 0 auto;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 32px;
+  padding: 36px 32px 48px;
   background-color: var(--bg-gray);
   flex-wrap: wrap;
   gap: 20px;
 }
 
+.element-photographer .footer-2 .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .element-photographer .text-wrapper-30 {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   color: var(--text-900);
 }
 
 .element-photographer .footer-2 .div-8 {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
-.element-photographer .text-wrapper-31,
-.element-photographer .footer-2 .text-wrapper-8 {
+.element-photographer .text-wrapper-31 {
   font-size: 14px;
   line-height: 20px;
   color: var(--text-600);
@@ -1393,8 +1451,11 @@ button:focus-visible {
 }
 
 .element-photographer .footer-2 .text-wrapper-8 {
-  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
   color: var(--text-900);
+  cursor: pointer;
 }
 
 .element-photographer .text-wrapper-31:hover {
@@ -1407,9 +1468,6 @@ button:focus-visible {
   color: var(--text-600);
 }
 
-/* =========================================================
-   DARK MODE STYLES
-   ========================================================= */
 body.dark-theme {
   background-color: #0b1320;
   color: #f0f1f3;
@@ -1485,9 +1543,6 @@ body.dark-theme .pricing-plans {
   background-color: #0a1424 !important;
 }
 
-/* =========================================================
-   HAMBURGER MENU TOGGLE
-   ========================================================= */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -1509,9 +1564,6 @@ body.dark-theme .pricing-plans {
   transition: all 0.3s ease;
 }
 
-/* =========================================================
-   GALLERY LIGHTBOX MODAL
-   ========================================================= */
 .gallery-modal {
   display: none;
   position: fixed;
@@ -1560,9 +1612,6 @@ body.dark-theme .pricing-plans {
   transform: scale(1.2);
 }
 
-/* =========================================================
-   RESPONSIVE MEDIA QUERIES
-   ========================================================= */
 @media (max-width: 992px) {
   .element-photographer .navigation {
     padding: 16px 24px;
